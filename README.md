@@ -5,7 +5,12 @@
 * figure out how to install my vim settings
 * get laravel working
 
-docker build -t wagena/workstation:1.0 -t wagena/workstation:latest .
+// build any updates
+$ docker build -t wagena/workstation:1.0 -t wagena/workstation:latest .
+
+// push after build
+$ docker push wagena/laravel:1.0 
+$ docker push wagena/laravel:latest
 
 docker run --rm -it wagena/workstation bash
 docker run --rm -it wagena/workstation zsh
