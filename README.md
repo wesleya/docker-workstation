@@ -5,6 +5,7 @@
 * figure out how to install my vim settings
 * get laravel working
 
+```
 // build any updates
 $ docker build -t wagena/workstation:1.0 -t wagena/workstation:latest .
 
@@ -15,7 +16,7 @@ $ docker push wagena/laravel:latest
 docker run --rm -it wagena/workstation bash
 docker run --rm -it wagena/workstation zsh
 docker run --rm -it wagena/workstation 
-
+```
 
 ## Docker Compose
 
@@ -31,3 +32,19 @@ docker-compose run workstation
 
 # remove services
 docker-compose down
+
+## Remove/Stop Containers/Images
+
+```
+# List all containers (only IDs)
+$ docker ps -aq
+
+#Stop all running containers
+$ docker stop $(docker ps -aq)
+
+# Remove all containers
+$ docker rm $(docker ps -aq)
+
+# Remove all images
+$ docker rmi $(docker images -q)
+```
